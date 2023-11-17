@@ -12,5 +12,10 @@
     components: {
       FileUpload,
     },
+    head() {
+        return {
+            title: 'CSV to PDF Converter', // Set the title for the page
+        };
+    },
   };
   </script>
