@@ -9,7 +9,9 @@
   import Papa from 'papaparse';
   import pdfMake from 'pdfmake/build/pdfmake';
   import pdfFonts from 'pdfmake/build/vfs_fonts.js'; 
-  
+  import { vfs } from 'pdfmake/build/vfs_fonts.js'; // Use the correct export name
+  pdfMake.vfs = vfs;
+
   pdfMake.vfs = pdfFonts.pdfMake.vfs;
   
   export default {
