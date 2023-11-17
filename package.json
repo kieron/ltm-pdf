@@ -1,14 +1,21 @@
 {
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "build": "NITRO_PRESET=cloudflare-pages nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-10-30 --proxy 3000 -- npm run dev",
+    "pages:deploy": "npm run build && wrangler pages deploy ./dist"
   },
-  "dependencies": {
-    "2": "^3.0.0",
-    "nuxt": "^2.17",
-    "papaparse": "^5.4.1",
-    "pdfmake": "^0.2.8"
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.8.1",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "wrangler": "^3.16.0"
   }
 }
