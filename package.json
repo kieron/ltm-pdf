@@ -17,5 +17,9 @@
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
     "wrangler": "^3.16.0"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "pdfmake": "^0.2.8"
   }
 }
